@@ -27,12 +27,15 @@ const updateInterface = (data) => {
     if (weather.IsDayTime) {
         time = "img/day.svg"
         card.classList.remove('night-mode')
-         card.classList.add('bg-primary')
-         btn.classList.add('btn-primary')
-         btn.classList.remove('btn-outline-primary')
-         city.classList.remove('text-white')
-         weatherText.classList.remove('text-white')
-         temp.classList.remove('text-white')
+        card.classList.add('bg-primary')
+        btn.classList.add('btn-primary')
+        btn.classList.remove('btn-outline-primary')
+        city.classList.remove('text-white')
+        weatherText.classList.remove('text-white')
+        temp.classList.remove('text-white')
+        iconContainer.classList.remove('js-icon__night')
+         iconContainer.classList.add('js-icon')
+         
 
         // img.src = img.src.replace("https://via.placeholder.com/400x300", "time");
     } else {
@@ -45,6 +48,8 @@ const updateInterface = (data) => {
         city.classList.add('text-white')
         weatherText.classList.add('text-white')
         temp.classList.add('text-white')
+        iconContainer.classList.remove('js-icon')
+        iconContainer.classList.add('js-icon__night')
     }
     img.setAttribute('src', time)
 

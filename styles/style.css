@@ -161,16 +161,26 @@ body {
 }
 .container .js-card .js-icon {
   position: relative;
-  top: -50px;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.918);
+  top: 0px;
+  width: 90px;
+  height: 45px;
+  background-color: #e6ecf6;
+  border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+}
+.container .js-card .js-icon__night {
+  position: relative;
+  top: 0px;
+  width: 90px;
+  height: 45px;
+  background-color: #243046;
+  border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 90px;
 }
 .container .js-card .icon {
   position: relative;
-  top: 20px;
-  left: -5px;
+  top: -27px;
+  left: -10px;
   border-radius: 50%;
   width: 110px;
 }
