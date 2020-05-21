@@ -1,4 +1,4 @@
-const key = "KhzTLf5knMzxZBhIv0hEf2wMIncPxlOP";
+const key = "S2Y86AUVPSGHA6hcr6sMjm5WfeFR9QeR";
 
 const getCurrentWeather = async (locationKey) => {
     const response = await fetch(`http://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${key}`);

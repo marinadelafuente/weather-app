@@ -21,6 +21,35 @@ body {
         }
     }
 
+    // .js-card {
+    //     height: 400px;
+    // }
+
+    .js-card {
+       position: relative;
+       text-align: center;
+       height: 427px;
+    //    display: inline-block;
+    }
+
+    .js-icon {
+        position: relative;
+        top: -50px;
+        border-radius: 50%;
+        width: 100px;
+    }
+
+    .details {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // z-index: 1;
+        // height: 350px;
+        // margin-bottom: -50px;
+        // border-radius: 50%;
+    }
+
     .details h5 {
         font-weight: 300;
     }
@@ -29,5 +58,10 @@ body {
         font-size: 4.8rem;
         font-family: $secondary-font;
         font-weight: 200;
+    }
+
+    .night-mode {
+        background-color: rgba(252, 252, 159, 0.856);
+        
     }
 }

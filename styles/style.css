@@ -105,22 +105,22 @@ label {
 }
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 :-ms-input-placeholder {
   /* IE 10+ */
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 body {
@@ -140,6 +140,23 @@ body {
 .container .title .emoji {
   text-shadow: none;
 }
+.container .js-card {
+  position: relative;
+  text-align: center;
+  height: 427px;
+}
+.container .js-icon {
+  position: relative;
+  top: -50px;
+  border-radius: 50%;
+  width: 100px;
+}
+.container .details {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .container .details h5 {
   font-weight: 300;
 }
@@ -147,6 +164,9 @@ body {
   font-size: 4.8rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 200;
+}
+.container .night-mode {
+  background-color: rgba(252, 252, 159, 0.856);
 }
 
 /*# sourceMappingURL=style.css.map */
