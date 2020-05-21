@@ -6,11 +6,11 @@
 }
 
 h1 {
-  font-size: 3.8rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 h3 {
@@ -34,16 +34,16 @@ label {
 }
 
 .emoji {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
 }
 
 @media all and (min-width: 768px) {
   h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 
   h2 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   h3 {
@@ -67,16 +67,16 @@ label {
   }
 
   .emoji {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 }
 @media all and (min-width: 1024px) {
   h1 {
-    font-size: 4.5rem;
+    font-size: 5rem;
   }
 
   h2 {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 
   h3 {
@@ -100,7 +100,7 @@ label {
   }
 
   .emoji {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 ::-webkit-input-placeholder {
@@ -145,27 +145,37 @@ body {
   text-align: center;
   height: 427px;
 }
-.container .js-icon {
-  position: relative;
-  top: -50px;
-  border-radius: 50%;
-  width: 100px;
-}
-.container .details {
+.container .js-card .details {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.container .details h5 {
+.container .js-card .details h5 {
   font-weight: 300;
 }
-.container .temp span {
+.container .js-card .details .js-temp {
   font-size: 4.8rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 200;
 }
-.container .night-mode {
+.container .js-card .js-icon {
+  position: relative;
+  top: -50px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.918);
+}
+.container .js-card .icon {
+  position: relative;
+  top: 20px;
+  left: -5px;
+  border-radius: 50%;
+  width: 110px;
+}
+
+.night-mode {
   background-color: rgba(252, 252, 159, 0.856);
 }
 

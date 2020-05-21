@@ -15,7 +15,7 @@ const updateInterface = (data) => {
 
     city.innerHTML = `${cityName.LocalizedName}, ${cityName.Country.LocalizedName}`
     weatherText.innerHTML = weather.WeatherText;
-    temp.innerHTML = weather.Temperature.Metric.Value;
+    temp.innerHTML = `${weather.Temperature.Metric.Value}&deg;C`;
 
     // hide/show the weather card info
     if (card.classList.contains('d-none')) {
@@ -26,6 +26,14 @@ const updateInterface = (data) => {
     time = null;
     if (weather.IsDayTime) {
         time = "img/day.svg"
+        card.classList.remove('night-mode')
+         card.classList.add('bg-primary')
+         btn.classList.add('btn-primary')
+         btn.classList.remove('btn-outline-primary')
+         city.classList.remove('text-white')
+         weatherText.classList.remove('text-white')
+         temp.classList.remove('text-white')
+
         // img.src = img.src.replace("https://via.placeholder.com/400x300", "time");
     } else {
         // img.src = img.src.replace("https://via.placeholder.com/400x300", "time");
@@ -34,15 +42,15 @@ const updateInterface = (data) => {
         card.classList.add('night-mode')
         btn.classList.remove('btn-primary')
         btn.classList.add('btn-outline-primary')
-
+        city.classList.add('text-white')
+        weatherText.classList.add('text-white')
+        temp.classList.add('text-white')
     }
     img.setAttribute('src', time)
 
     //weather icons
-    const icons = `img/icons/${weather.WeatherIcon}.svg`
-    console.log(icons);
-    
-    iconContainer.innerHTML = `<img src=${icons} alt="${weather.WeatherText} icon class="icon"></img>`
+    const icons = `img/icon/${weather.WeatherIcon}.png`
+    iconContainer.innerHTML = `<img src=${icons} alt="${weather.WeatherText} icon" class="icon"></img>`
 }
 
 // get info from server
@@ -62,7 +70,7 @@ searchCity = (ev) => {
 
     // get city value
     const searchedCity = searchInput.value; // search.search.value
-    // search.reset();
+    search.reset();
 
     // get info from the API matching the city
     getApiInfo(searchedCity)
