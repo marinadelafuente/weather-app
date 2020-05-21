@@ -1,29 +1,28 @@
-@import "_variables.scss";
-@import "_mixings.scss";
-@import "_utilities.scss";
+@import "_components/_variables.scss";
 @import "_reset.scss";
 @import "_components/_typography.scss";
 
 body {
     letter-spacing: 0.02rem;
     font-family: $primary-font;
+    background-color: darken($color: #033642, $amount: 0);
 }
 
 .container {
-max-width: 400px;
+    max-width: 400px;
 
     .title {
         font-family: $secondary-font;
-        color: $primary-color;
         font-weight: 400;
-    }
+        text-shadow: 2px 1px 2px rgb(247, 244, 244);
 
-    form label {
-        color: $color-deactivated;
+        .emoji {
+            text-shadow: none;
+        }
     }
 
     .details h5 {
-        font-weight: 200;
+        font-weight: 300;
     }
 
     .temp span {
@@ -31,10 +30,4 @@ max-width: 400px;
         font-family: $secondary-font;
         font-weight: 200;
     }
-}
-
-
-.btn-sucess {
-    @include button-style($color-success);
-    @include border-radius(10px);
 }
