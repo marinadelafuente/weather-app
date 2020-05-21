@@ -1,0 +1,94 @@
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+p {
+    font-size: 1.2rem;
+}
+
+label {
+    font-size: 1.6rem;
+}
+
+
+@media all and (min-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
+    h4 {
+        font-size: 2.2rem;
+    }
+    h5 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1.4rem;
+    }
+}
+
+@media all and (min-width: 1024px) {
+   h1 {
+       font-size: 4.5rem;
+   }
+
+   h2 {
+       font-size: 4rem;
+   }
+
+   h3 {
+       font-size: 3rem;
+   }
+
+   h4 {
+       font-size: 2.6rem;
+   }
+
+    h5 {
+        font-size: 2rem;
+    }
+
+   p {
+       font-size: 1.6rem;
+   }
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 1.2rem;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 1.2rem;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 1.2rem;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 1.2rem;
+}

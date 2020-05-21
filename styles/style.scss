@@ -1,0 +1,40 @@
+@import "_variables.scss";
+@import "_mixings.scss";
+@import "_utilities.scss";
+@import "_reset.scss";
+@import "_components/_typography.scss";
+
+body {
+    letter-spacing: 0.02rem;
+    font-family: $primary-font;
+}
+
+.container {
+max-width: 400px;
+
+    .title {
+        font-family: $secondary-font;
+        color: $primary-color;
+        font-weight: 400;
+    }
+
+    form label {
+        color: $color-deactivated;
+    }
+
+    .details h5 {
+        font-weight: 200;
+    }
+
+    .temp span {
+        font-size: 4.8rem;
+        font-family: $secondary-font;
+        font-weight: 200;
+    }
+}
+
+
+.btn-sucess {
+    @include button-style($color-success);
+    @include border-radius(10px);
+}

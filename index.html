@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" --
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container my-5">
+        <header class="my-3 mx-auto text-center">
+            <h1 class="title my-4">WeatherToday</h1>
+            <form class="js-form my-4 text-muted">
+                <label for="search">Enter a location for weather info</label>
+                <input type="text" name="search" placeholder="Paris" class="js-input form-control p-2 mb-2" value="">
+            </form>
+        </header>
+        <section class="js-card shadow-lg rounded">
+            <img src="https://via.placeholder.com/400x300" class="js-img card-img-top">
+            <div class="js-icon bg-light mx-auto text-center">
+                <!-- icon -->
+            </div>
+            <div class="text-muted text-uppercase text-center details">
+                <h3 class="my-4 js-city">City name</h3>
+                <h5 class="my-4 js-weather">Weather condition</h5>
+                <div class="display-2 my-4 temp">
+                    <span>temp</span>
+                    <span>&deg;C</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
