@@ -1,12 +1,15 @@
+const body = document.querySelector('body');
 const search = document.querySelector('.js-form');
 const searchInput = document.querySelector('.js-input');
+const btn = document.querySelector('.js-btn');
 const card = document.querySelector('.js-card');
+const error = document.querySelector('.js-error');
 const img = document.querySelector('.js-img');
 const iconContainer = document.querySelector('.js-icon');
 const city = document.querySelector('.js-city');
 const weatherText = document.querySelector('.js-weather');
 const temp = document.querySelector('.js-temp');
-const btn = document.querySelector('.btn');
+
 
 // update UI with API data
 const updateInterface = (data) => {
@@ -26,30 +29,21 @@ const updateInterface = (data) => {
     time = null;
     if (weather.IsDayTime) {
         time = "img/day.svg"
-        card.classList.remove('night-mode')
-        card.classList.add('bg-primary')
-        btn.classList.add('btn-primary')
-        btn.classList.remove('btn-outline-primary')
+        card.classList.replace('bg-night-mode', 'bg-primary')
+        btn.classList.replace('btn-outline-primary', 'btn-primary')
         city.classList.remove('text-white')
         weatherText.classList.remove('text-white')
         temp.classList.remove('text-white')
-        iconContainer.classList.remove('js-icon__night')
-         iconContainer.classList.add('js-icon')
-         
+        iconContainer.classList.replace('icon-weather__night', 'icon-weather')
 
-        // img.src = img.src.replace("https://via.placeholder.com/400x300", "time");
     } else {
-        // img.src = img.src.replace("https://via.placeholder.com/400x300", "time");
         time = "img/night.svg"
-        card.classList.remove('bg-primary')
-        card.classList.add('night-mode')
-        btn.classList.remove('btn-primary')
-        btn.classList.add('btn-outline-primary')
+        card.classList.replace('bg-primary', 'bg-night-mode')
+        btn.classList.replace('btn-primary', 'btn-outline-primary')
         city.classList.add('text-white')
         weatherText.classList.add('text-white')
         temp.classList.add('text-white')
-        iconContainer.classList.remove('js-icon')
-        iconContainer.classList.add('js-icon__night')
+        iconContainer.classList.replace('icon-weather', 'icon-weather__night')
     }
     img.setAttribute('src', time)
 
@@ -69,25 +63,37 @@ const getApiInfo = async (city) => {
     };
 }
 
+
 // search for city
-searchCity = (ev) => {
+const handlerSearch = (ev) => {
     ev.preventDefault();
 
     // get city value
     const searchedCity = searchInput.value; // search.search.value
-    search.reset();
 
-    // get info from the API matching the city
-    getApiInfo(searchedCity)
-        .then(data => {
-            console.log(data)
-            updateInterface(data);
-        })
-        .catch(error => {
-            console.log(error.message);
-        })
-    console.log(searchedCity);
+    // error message to introduce city
+    if (!searchedCity) {
+        if (error.classList.contains('d-none')) {
+            error.classList.remove('d-none')
+        }
 
+    } else {
+        // get info from the API matching the city
+        if (error.classList.contains('d-none') === false) {
+            error.classList.add('d-none')
+        }
+        getApiInfo(searchedCity)
+            .then(data => {
+                console.log(data)
+                updateInterface(data);
+            })
+            .catch(error => {
+                alert('We cannot find that city. Please, try again.')
+                search.reset();
+                // body.innerHTML = `${error.message}`
+                console.log(error.message);
+            })
+    }
 }
 
-search.addEventListener('submit', searchCity);
+search.addEventListener('submit', handlerSearch);

@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/minty/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -- -->
-    <!-- integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
@@ -18,23 +16,23 @@
             <h1 class="title text-primary my-4">WeatherT<span class="emoji">🌞</span>day</h1>
             <form class="js-form my-4 text-muted">
                 <label for="search">Enter a location for weather info</label>
-                <input type="text" name="search" placeholder="Paris" class="js-input form-control p-4 mb-2"
-                    value="">
-                <button type="submit" class="btn btn-primary btn-block">Click here</button>
+                <input type="text" name="search" placeholder="Paris" class="js-input form-control p-4 mb-2">
+                <button type="submit" class="js-btn btn btn-primary btn-block">Click here</button>
             </form>
         </header>
-        <section class="js-card shadow-lg rounded d-none bg-primary">
+        <div class="js-error error d-none">
+            <p class="text-warning text-center"> Please enter a correct city</p>
+        </div>
+        <section class="js-card card shadow-lg rounded d-none bg-primary">
             <img src="https://via.placeholder.com/400x300" class="js-img card-img-top">
             <div class="text-uppercase text-center details">
                 <h2 class="my-4 js-city">City name</h2>
                 <h5 class="my-4 js-weather">Weather condition</h5>
                 <div class="display-2 my-4 py-2 temp text-center">
-                    <p class="lead js-temp"></p>
+                    <p class="lead js-temp temp"></p>
                 </div>
             </div>
-            <div class="js-icon mx-auto text-center"></div>
-
-            
+            <div class="js-icon icon-weather mx-auto text-center"></div>
         </section>
     </div>
 

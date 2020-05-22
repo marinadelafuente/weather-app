@@ -8,6 +8,19 @@ body {
     background-color: darken($color: #033642, $amount: 0);
 }
 
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+
+    p {
+        font-size: 2rem;
+    }
+}
+
 .container {
     max-width: 400px;
 
@@ -21,7 +34,7 @@ body {
         }
     }
 
-    .js-card {
+    .card {
         position: relative;
         text-align: center;
         height: 427px;
@@ -36,28 +49,28 @@ body {
                 font-weight: 300;
             }
 
-            .js-temp {
+            .temp {
                 font-size: 4.8rem;
                 font-family: $secondary-font;
                 font-weight: 200;
             }
         }
 
-        .js-icon {
+        .icon-weather {
             position: relative;
             top: 0px;
-            width: 90px;
-            height: 45px;
+            width: 100px;
+            height: 48px;
             background-color: #e6ecf6;
             border-bottom-left-radius: 90px;
             border-bottom-right-radius: 90px;
         }
 
-        .js-icon__night {
+        .icon-weather__night {
             position: relative;
             top: 0px;
-            width: 90px;
-            height: 45px;
+            width: 100px;
+            height: 48px;
             background-color: #243046;
             border-bottom-left-radius: 90px;
             border-bottom-right-radius: 90px;
@@ -66,13 +79,13 @@ body {
         .icon {
             position: relative;
             top: -27px;
-            left: -10px;
+            left: -5px;
             border-radius: 50%;
             width: 110px;
         }
     }
 }
 
-.night-mode {
+.bg-night-mode {
     background-color: rgba(252, 252, 159, 0.856);
 }
