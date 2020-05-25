@@ -5,7 +5,7 @@ const btn = document.querySelector('.js-btn');
 const card = document.querySelector('.js-card');
 const error = document.querySelector('.js-error');
 const img = document.querySelector('.js-img');
-const iconContainer = document.querySelector('.js-icon');
+const iconContainer = document.querySelector('.js-icon-container');
 const city = document.querySelector('.js-city');
 const weatherText = document.querySelector('.js-weather');
 const temp = document.querySelector('.js-temp');
@@ -17,8 +17,6 @@ const loader = document.querySelector('.progress-bar');
 const updateInterface = (data) => {
     //destructuring properties
     const {cityName, weather} = data;
-    // const cityName = data.cityName;
-    // const weather = data.weather;
 
     city.innerHTML = `${cityName.LocalizedName}, ${cityName.Country.LocalizedName}`
     weatherText.innerHTML = weather.WeatherText;
@@ -41,7 +39,7 @@ const updateInterface = (data) => {
         city.classList.remove('text-white')
         weatherText.classList.remove('text-white')
         temp.classList.remove('text-white')
-        iconContainer.classList.replace('icon-weather__night', 'icon-weather')
+        iconContainer.classList.replace('icon-container__night', 'icon-container')
 
     } else {
         time = "img/night.svg"
@@ -50,7 +48,7 @@ const updateInterface = (data) => {
         city.classList.add('text-white')
         weatherText.classList.add('text-white')
         temp.classList.add('text-white')
-        iconContainer.classList.replace('icon-weather', 'icon-weather__night')
+        iconContainer.classList.replace('icon-container', 'icon-container__night')
     }
     img.setAttribute('src', time)
 
@@ -74,7 +72,7 @@ const getApiInfo = async (city) => {
 const handlerSearch = (ev) => {
     ev.preventDefault();
 
-    // add loader    
+    // show loader while waiting for data 
     loaderContainer.classList.remove('d-none');
 
     // get city value
