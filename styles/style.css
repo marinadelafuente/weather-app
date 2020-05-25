@@ -156,6 +156,7 @@ body {
   position: relative;
   text-align: center;
   height: 427px;
+  color: #070792;
 }
 .container .card .details {
   position: absolute;
@@ -181,13 +182,7 @@ body {
   border-bottom-right-radius: 90px;
 }
 .container .card .icon-container__night {
-  position: relative;
-  top: 0px;
-  width: 100px;
-  height: 48px;
   background-color: #243046;
-  border-bottom-left-radius: 90px;
-  border-bottom-right-radius: 90px;
 }
 .container .card .icon {
   position: relative;

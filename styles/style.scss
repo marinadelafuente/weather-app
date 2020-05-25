@@ -38,12 +38,14 @@ body {
         position: relative;
         text-align: center;
         height: 427px;
+         color: rgb(7, 7, 146);
 
         .details {
             position: absolute;
             top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
+           
 
             h5 {
                 font-weight: 300;
@@ -67,13 +69,7 @@ body {
         }
 
         .icon-container__night {
-            position: relative;
-            top: 0px;
-            width: 100px;
-            height: 48px;
             background-color: #243046;
-            border-bottom-left-radius: 90px;
-            border-bottom-right-radius: 90px;
         }
 
         .icon {

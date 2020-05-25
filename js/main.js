@@ -16,7 +16,10 @@ const loader = document.querySelector('.progress-bar');
 // update UI with API data
 const updateInterface = (data) => {
     //destructuring properties
-    const {cityName, weather} = data;
+    const {
+        cityName,
+        weather
+    } = data;
 
     city.innerHTML = `${cityName.LocalizedName}, ${cityName.Country.LocalizedName}`
     weatherText.innerHTML = weather.WeatherText;
@@ -36,23 +39,19 @@ const updateInterface = (data) => {
         time = "img/day.svg"
         card.classList.replace('bg-night-mode', 'bg-primary')
         btn.classList.replace('btn-outline-primary', 'btn-primary')
-        city.classList.remove('text-white')
-        weatherText.classList.remove('text-white')
-        temp.classList.remove('text-white')
-        iconContainer.classList.replace('icon-container__night', 'icon-container')
+        card.classList.remove('text-white')
+        iconContainer.classList.remove('icon-container__night')
 
     } else {
         time = "img/night.svg"
         card.classList.replace('bg-primary', 'bg-night-mode')
         btn.classList.replace('btn-primary', 'btn-outline-primary')
-        city.classList.add('text-white')
-        weatherText.classList.add('text-white')
-        temp.classList.add('text-white')
-        iconContainer.classList.replace('icon-container', 'icon-container__night')
+        card.classList.add('text-white')
+        iconContainer.classList.add('icon-container__night')
     }
     img.setAttribute('src', time)
 
-    //weather icons
+    // weather icons
     const icons = `img/icon/${weather.WeatherIcon}.png`
     iconContainer.innerHTML = `<img src=${icons} alt="${weather.WeatherText} icon" class="icon"></img>`
 }
