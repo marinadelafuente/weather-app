@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/minty/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/minty/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container my-5">
-        <header class="my-3 mx-auto text-center">
-            <h1 class="title text-primary my-4">WeatherT<span class="emoji">🌞</span>day</h1>
-            <form class="js-form my-4 text-muted">
-                <label for="search">Enter a location for weather info</label>
-                <input type="text" name="search" placeholder="Paris" class="js-input form-control p-4 mb-2">
-                <button type="submit" class="js-btn btn btn-primary btn-block">Click here</button>
-            </form>
-        </header>
-        <div class="progress d-none mb-3">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style= "width:100%"></div>
+      <header class="my-3 mx-auto text-center">
+        <h1 class="title text-primary my-4">
+          WeatherT<span class="emoji">🌞</span>day
+        </h1>
+        <form class="js-form my-4 text-muted">
+          <label for="search">Enter a location for weather info</label>
+          <input
+            type="text"
+            name="search"
+            placeholder="Perth"
+            class="js-input form-control p-4 mb-2"
+          />
+          <button type="submit" class="js-btn btn btn-primary btn-block">
+            Click here
+          </button>
+        </form>
+      </header>
+      <div class="progress d-none mb-3">
+        <div
+          class="progress-bar progress-bar-striped progress-bar-animated"
+          role="progressbar"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 100%;"
+        ></div>
+      </div>
+      <div class="js-error error d-none">
+        <p class="text-warning text-center">Please enter a correct city</p>
+      </div>
+      <section class="js-card card shadow-lg rounded d-none bg-primary">
+        <img
+          src="https://via.placeholder.com/400x300"
+          class="js-img card-img-top"
+        />
+        <div class="text-uppercase text-center details">
+          <h2 class="my-4 js-city">City name</h2>
+          <h5 class="my-4 js-weather">Weather condition</h5>
+          <div class="display-2 my-4 py-2 temp text-center">
+            <p class="lead js-temp temp"></p>
+          </div>
         </div>
-        <div class="js-error error d-none">
-            <p class="text-warning text-center"> Please enter a correct city</p>
-        </div>
-        <section class="js-card card shadow-lg rounded d-none bg-primary">
-            <img src="https://via.placeholder.com/400x300" class="js-img card-img-top">
-            <div class="text-uppercase text-center details">
-                <h2 class="my-4 js-city">City name</h2>
-                <h5 class="my-4 js-weather">Weather condition</h5>
-                <div class="display-2 my-4 py-2 temp text-center">
-                    <p class="lead js-temp temp"></p>
-                </div>
-            </div>
-            <div class="js-icon-container icon-container mx-auto text-center"></div>
-        </section>
+        <div class="js-icon-container icon-container mx-auto text-center"></div>
+      </section>
     </div>
 
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
