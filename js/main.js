@@ -15,8 +15,10 @@ const loader = document.querySelector('.progress-bar');
 
 // update UI with API data
 const updateInterface = (data) => {
-    const cityName = data.cityName;
-    const weather = data.weather;
+    //destructuring properties
+    const {cityName, weather} = data;
+    // const cityName = data.cityName;
+    // const weather = data.weather;
 
     city.innerHTML = `${cityName.LocalizedName}, ${cityName.Country.LocalizedName}`
     weatherText.innerHTML = weather.WeatherText;
