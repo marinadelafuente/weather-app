@@ -9,6 +9,8 @@ const iconContainer = document.querySelector('.js-icon');
 const city = document.querySelector('.js-city');
 const weatherText = document.querySelector('.js-weather');
 const temp = document.querySelector('.js-temp');
+const loaderContainer = document.querySelector('.progress');
+const loader = document.querySelector('.progress-bar');
 
 
 // update UI with API data
@@ -24,6 +26,9 @@ const updateInterface = (data) => {
     if (card.classList.contains('d-none')) {
         card.classList.remove('d-none')
     }
+
+    // hide loader
+    loaderContainer.classList.add('d-none');
 
     // daytime/nightime
     time = null;
@@ -63,35 +68,45 @@ const getApiInfo = async (city) => {
     };
 }
 
-
 // search for city
 const handlerSearch = (ev) => {
     ev.preventDefault();
 
+    // add loader    
+    loaderContainer.classList.remove('d-none');
+
     // get city value
     const searchedCity = searchInput.value; // search.search.value
 
-    // error message to introduce city
+    // show error message when empty
     if (!searchedCity) {
         if (error.classList.contains('d-none')) {
             error.classList.remove('d-none')
         }
 
     } else {
-        // get info from the API matching the city
+        // hide error message when empty
         if (error.classList.contains('d-none') === false) {
             error.classList.add('d-none')
         }
+        // get info from the API matching the city
         getApiInfo(searchedCity)
             .then(data => {
                 console.log(data)
                 updateInterface(data);
             })
+            // if error
             .catch(error => {
-                alert('We cannot find that city. Please, try again.')
+                loaderContainer.classList.add('d-none');
                 search.reset();
-                // body.innerHTML = `${error.message}`
-                console.log(error.message);
+
+                if (error.message === 'Failed to fetch') {
+                    location.href = "../errorPage.html"
+                } else {
+                    alert('We cannot find that city. Please, try again.')
+                    card.classList.add('d-none')
+                    console.log(error.message);
+                }
             })
     }
 }
