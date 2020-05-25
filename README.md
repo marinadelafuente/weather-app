@@ -14,6 +14,7 @@
         .weather type
 - Personalized errors in case of limit calls to API and blank requests
 - Loader 
+- Local Storage
 
 -- Partially based in lesson 13 of Udemy's course [Modern Javascript (from Novice to Ninja)][https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/].
 
