@@ -31,6 +31,7 @@ const getData = () => {
 
       if (error.message === "Failed to fetch") {
         location.href = "errorPage.html";
+         console.log(error.message);
       } else {
         // alert("We cannot find that city. Please, try again.");
         card.classList.add("d-none");
