@@ -1,4 +1,4 @@
-const key = "52JG9KuwuniaPhjFHcDKqD8uzkEtAgzw";
+const key = "32cO9BXL9E5vkW2Ngpt83vir7B3ARJCq";
 
 const getCurrentWeather = async (locationKey) => {
   const response = await fetch(
