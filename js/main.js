@@ -120,7 +120,7 @@ const handlerSearch = (ev) => {
         search.reset();
 
         if (error.message === "Failed to fetch") {
-          location.href = "../errorPage.html";
+          location.href = "errorPage.html";
         } else {
           alert("We cannot find that city. Please, try again.");
           card.classList.add("d-none");
