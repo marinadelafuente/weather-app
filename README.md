@@ -1,6 +1,6 @@
 # weather-app
 
-![Appearance](https://github.com/marinadelafuente/weather-app/blob/master/WeatherToday%20app.png?raw=true)
+![Appearance](https://github.com/marinadelafuente/weather-app/blob/master/weatherToday.png?raw=true)
 
 -- Find the weather in your town with Javascript, SASS, Bootstrap (Bootswatch Mynt theme) and the AccuWeather API.
 -- There is a limit of 50 HTTP request per day to the Accuweather API.
